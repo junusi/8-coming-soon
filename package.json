@@ -12,7 +12,8 @@
     "url": "git+https://github.com/junusi/8-coming-soon.git"
   },
   "author": "Ivanas Krinickis",
-  "license": "MIT",
+  "license": "ISE",
+  
   "bugs": {
     "url": "https://github.com/junusi/8-coming-soon/issues"
   },
