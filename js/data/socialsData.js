@@ -4,7 +4,11 @@ const socialsData = [
         icon: 'facebook',
         active: true
     },
-   
+    {
+        href: '#',
+        icon: 'google-plus',
+        active: false
+    },
     {
         href: '#',
         icon: 'twitter',
