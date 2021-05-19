@@ -20,3 +20,21 @@ function handleLogoClick() {
     console.log('Buvo paspaustas logotipas!');
 }
 logoDOM.addEventListener('click',handleLogoClick);
+
+// const btnDOM = document.querySelector('.btn');
+// function handleBtnClick () {
+//  console.log('Buvo paspaustas migtukas');}
+// btnDOM.addEventListener('click',handleBtnClick);
+
+const btnDOM = document.querySelector('.btn');
+let count = 0;
+btnDOM.addEventListener ('click',function()  {
+count ++;
+btnDOM.innerText = `click me (${count})`;});
+
+
+
+
+
+
+
