@@ -9,6 +9,14 @@ renderClock('#hero_clock', '04-19 10:00:00');
 socials('#socials_block', socialsData);
 progressBar('.left-column > p', progressBarData);
 
+                   //  IVENTAI -IVYKIAI.
+//-kas?
+//-koks ivykio tipas? - click
+//-ka daryti?
+const logoDOM = document.querySelector('.logo');
+console.log(logoDOM);
 
-
-
+function handleLogoClick() {
+    console.log('Buvo paspaustas logotipas!');
+}
+logoDOM.addEventListener('click',handleLogoClick);
