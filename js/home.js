@@ -1,4 +1,3 @@
-   
 import { renderClock } from './components/clock/clock.js';
 import { progressBar } from './components/progress-bar/progressBar.js';
 import { socials } from './components/socials/socials.js';
@@ -7,30 +6,26 @@ import { socialsData } from './data/socialsData.js';
 
 renderClock('#hero_clock', '04-19 10:00:00');
 socials('#socials_block', socialsData);
-progressBar('.left-column > p', progressBarData);
+progressBar('.left-column', progressBarData);
 
-                   //  IVENTAI -IVYKIAI.
-//-kas?
-//-koks ivykio tipas? - click
-//-ka daryti?
+// - kas?
+// - koks ivykio tipas?
+// - ka daryti?
+
 const logoDOM = document.querySelector('.logo');
-console.log(logoDOM);
-
 function handleLogoClick() {
     console.log('Buvo paspaustas logotipas!');
 }
-logoDOM.addEventListener('click',handleLogoClick);
+logoDOM.addEventListener('click', handleLogoClick);
 
-// const btnDOM = document.querySelector('.btn');
-// function handleBtnClick () {
-//  console.log('Buvo paspaustas migtukas');}
-// btnDOM.addEventListener('click',handleBtnClick);
 
 const btnDOM = document.querySelector('.btn');
 let count = 0;
-btnDOM.addEventListener ('click',function()  {
-count ++;
-btnDOM.innerText = `click me (${count})`;});
+btnDOM.addEventListener('click', () => {
+    count++;
+    btnDOM.innerText = `Click me (${count})`;
+});
+
 
 
 
