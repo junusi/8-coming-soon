@@ -20,7 +20,26 @@ function progressBar(selector, data) {
     }
 
     // result return
-    DOM.insertAdjacentHTML('afterend', HTML);
+    DOM.insertAdjacentHTML('beforeend', HTML);
+    const allProgressBarDOM = document.querySelectorAll('.progress-bar');
+
+        //  EVENT  
+const animate =  () => {
+    let animeitedElementsCount = 0;
+    for (const bar of allProgressBarDOM) {
+        if (bar.offsetTop + bar.offsetHeight <= scrollY + innerHeight){
+           bar.classList.add('animate');
+           animeitedElementsCount++;
+          } 
+    }
+        if (animeitedElementsCount === allProgressBarDOM.length) {
+            document.removeEventListener('scroll',animate);
+    
+}
+
+    
+}
+    document.addEventListener('scroll',animate);
 }
 
 export { progressBar }
