@@ -21,14 +21,25 @@ function progressBar(selector, data) {
 
     // result return
     DOM.insertAdjacentHTML('beforeend', HTML);
-
     const allProgressBarDOM = document.querySelectorAll('.progress-bar');
-    console.log(allProgressBarDOM);
 
-    // event
-    document.addEventListener('scroll', () => {
-        console.log(scrollY);
-    })
+        //  EVENT  
+const animate =  () => {
+    let animeitedElementsCount = 0;
+    for (const bar of allProgressBarDOM) {
+        if (bar.offsetTop + bar.offsetHeight <= scrollY + innerHeight){
+           bar.classList.add('animate');
+           animeitedElementsCount++;
+          } 
+    }
+        if (animeitedElementsCount === allProgressBarDOM.length) {
+            document.removeEventListener('scroll',animate);
+    
+}
+
+    
+}
+    document.addEventListener('scroll',animate);
 }
 
 export { progressBar }
