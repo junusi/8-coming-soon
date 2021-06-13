@@ -16,8 +16,11 @@ function progressBar(selector, data) {
                             <div class="bar"></div>
                         </div>
                     </div>
-                </div>`;
+    
+            </div>`;
     }
+
+
 
     // result return
     DOM.insertAdjacentHTML('beforeend', HTML);
